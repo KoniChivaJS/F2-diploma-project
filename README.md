@@ -1,8 +1,8 @@
 # F2 Diploma Project
 
-**Відмовостійка мультитенантна платформа гарантованої доставки вебхуків для подієво-орієнтованої інтеграції програмних систем**
+**Дослідження стійкості до навантаження платформи гарантованої доставки вебхуків за різних конфігурацій обчислювальних ресурсів та сховищ даних**
 
-*Fault-Tolerant Multi-Tenant Webhook Delivery Platform for Event-Driven Software Integration*
+*Load Resilience Study of a Guaranteed Webhook Delivery Platform under Varying Compute Resource and Data Storage Configurations*
 
 Платформа приймає події від програмних систем і гарантує їх доставку отримувачам (at-least-once) в умовах відмов: повторні спроби без блокування черги, Dead Letter Queue, Circuit Breaker, HMAC-підпис запитів, захист від SSRF та ізоляція тенантів.
 
