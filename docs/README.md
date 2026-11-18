@@ -13,7 +13,9 @@
 | [proposal.md](proposal.md) | Thesis Proposal | Затверджено |
 | [0_intro.md](0_intro.md) | Вступ (науковий апарат) | Готово |
 | [1_analysis.md](1_analysis.md) | Розділ 1. Аналіз предметної області та постановка задачі | Готово (Розділ 1 сформовано) |
-| [2_design.md](2_design.md) | Розділ 2. Проєктування архітектури програмної системи | Заплановано |
+| [2_design.md](2_design.md) | Розділ 2. Проєктування архітектури програмної системи | У роботі (2.1–2.3 готово) |
+| [srs.md](srs.md) | Специфікація вимог (ISO/IEC/IEEE 29148) | Готово |
+| [adr/](adr/) | Architecture Decision Records | ADR-001 Approved |
 | [3_implementation.md](3_implementation.md) | Розділ 3. Програмна реалізація, тестування та експериментальне дослідження | Заплановано |
 | [4_conclusions.md](4_conclusions.md) | Висновки | Заплановано |
 
@@ -22,6 +24,17 @@
 Зведений документ Розділу 1 (Google Docs, доступ «Can comment»): [F2_Diploma_Chapter1_Куруляк](GOOGLE_DOCS_LINK)
 
 Markdown-версія: [1_analysis.md](1_analysis.md).
+
+## Розділ 2: архітектура (ЛР№5)
+
+| Артефакт | Файл |
+|---|---|
+| Специфікація вимог SRS v1.0 (ISO/IEC/IEEE 29148) з матрицею трасування | [srs.md](srs.md) |
+| C4 Level 1 — System Context | [2_design.md#diagram-level1](2_design.md#diagram-level1) |
+| C4 Level 2 — Container | [2_design.md#diagram-level2](2_design.md#diagram-level2) |
+| C4 Level 3 — Component (Delivery Worker) | [2_design.md#diagram-level3](2_design.md#diagram-level3) |
+| ADR-001: механізм планування відкладених спроб доставки (Approved) | [adr/0001-choice-of-technology.md](adr/0001-choice-of-technology.md) |
+| Звіти ШІ-аудитів (AI Disclosure) | [ai-logs/](ai-logs/) |
 
 ## Матриця нефункціональних вимог (NFRs Matrix)
 
@@ -53,8 +66,8 @@ Markdown-версія: [1_analysis.md](1_analysis.md).
 | № з/п | Назва етапу кваліфікаційної роботи | Термін виконання етапів проєкту | Примітка / Статус виконання |
 |---|---|---|---|
 | 1 | Аналіз предметної області та аналогів (Svix, Hookdeck, Convoy) за моделлю якості ДСТУ ISO/IEC 25010:2016, формулювання функціональних і нефункціональних вимог | 07.10.2026 – 31.10.2026 | Done |
-| 2 | Обґрунтування архітектурного стилю (модульний моноліт порівняно з мікросервісною архітектурою) і технологічного стеку, оформлення Architecture Decision Records | 01.11.2026 – 22.11.2026 | To Do |
-| 3 | Проєктування архітектури платформи за моделлю C4 і нотацією UML: виділення bounded contexts, портів і адаптерів, визначення fitness functions | 23.11.2026 – 27.12.2026 | To Do |
+| 2 | Обґрунтування архітектурного стилю (модульний моноліт порівняно з мікросервісною архітектурою) і технологічного стеку, оформлення Architecture Decision Records | 01.11.2026 – 22.11.2026 | In Progress (ADR-001 Approved) |
+| 3 | Проєктування архітектури платформи за моделлю C4 і нотацією UML: виділення bounded contexts, портів і адаптерів, визначення fitness functions | 23.11.2026 – 27.12.2026 | In Progress (C4 L1–L3 готово) |
 | 4 | Розробка та програмна реалізація алгоритмів критичних вузлів: Transactional Outbox, повторні спроби з backoff і jitter, Circuit Breaker, Bulkhead, Token Bucket, Deficit Round Robin, HMAC-SHA256, захист від SSRF | 28.12.2026 – 28.02.2027 | To Do |
 | 5 | Проєктування адміністративної панелі, контракту API та схеми розгортання в Kubernetes (Terraform, Helm, Argo CD, KEDA) | 18.01.2027 – 28.02.2027 | To Do |
 | 6 | Інструментальний аудит якості та безпеки коду: модульне, інтеграційне (Testcontainers) та property-based (fast-check) тестування, SonarQube, Semgrep, Trivy, gitleaks, STRIDE, OWASP ASVS L2 | 01.03.2027 – 04.04.2027 | To Do |
